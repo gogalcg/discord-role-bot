@@ -130,7 +130,7 @@ class ApplicationView(discord.ui.View):
         await applicant.add_roles(role_to_give, reason="Заявка одобрена")
         
         # Calculate expiration time (7 days from now)
-        expiration_time = datetime.now() + timedelta(days=7)
+        expiration_time = datetime.now() + timedelta(minutes=5)
         
         # Save to database
         expirations = load_expirations()
